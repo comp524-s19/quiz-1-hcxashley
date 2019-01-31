@@ -1,2 +1,4 @@
 finalGrade :: [Int] -> [Int] -> Int
-finalGrade xs ys = sum ((zipWith(*) xs ys)) `div` (sum ys)
+finalGrade xs ys = let gradeSum = sum (zipWith (*) xs ys)
+                       weightSum = sum ys
+                   in gradeSum `div` weightSum
