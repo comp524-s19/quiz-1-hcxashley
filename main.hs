@@ -1,1 +1,2 @@
-finalGrade xs ys = (sum (zipWith (*) xs ys)) / (sum ys)
+finalGrade :: [Int] -> [Int] -> Int
+finalGrade xs ys = sum ((zipWith(*) xs ys)) `div` (sum ys)
